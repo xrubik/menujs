@@ -1,28 +1,27 @@
 {
-  "name": "vue-contextmenujs",
+  "name": "@haoyue/vue-contextmenu",
   "version": "1.4.11",
   "description": "Vue contextmenu",
   "keywords": [
     "Vue",
-    "Contextmenu",
-    "右键菜单"
+    "Contextmenu"
   ],
   "main": "index.js",
   "scripts": {
     "test": "vue-cli-service serve ./test/main.js ",
     "build": "vue-cli-service build --target lib --name contextmenu index.js && rm ./dist/demo.html",
-    "publish": "npm publish"
+    "publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GitHub-Laziji/menujs.git"
+    "url": "git+https://github.com/xrubik/menujs.git"
   },
-  "author": "laziji",
+  "author": "haoyue",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GitHub-Laziji/menujs/issues"
+    "url": "https://github.com/xrubik/menujs/issues"
   },
-  "homepage": "https://github.com/GitHub-Laziji/menujs#readme",
+  "homepage": "https://github.com/xrubik/menujs#readme",
   "devDependencies": {
     "vue": "^2.6.10",
     "@vue/cli-service": "5.0.8",

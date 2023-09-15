@@ -18,7 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".menu[data-v-497d1621]{position:fixed;box-shadow:0 2px 4px rgba(0,0,0,.12),0 0 6px rgba(0,0,0,.04);background:#fff;border-radius:4px;padding:8px 0}.menu_body[data-v-497d1621]{display:block}.menu_item[data-v-497d1621]{list-style:none;line-height:32px;padding:0 16px;margin:0;font-size:13px;outline:0;display:flex;align-items:center;transition:.2s;border-bottom:1px solid #00000000}.menu_item__divided[data-v-497d1621]{border-bottom-color:#ebeef5}.menu_item .menu_item_icon[data-v-497d1621]{margin-right:8px;width:13px}.menu_item .menu_item_label[data-v-497d1621]{flex:1}.menu_item .menu_item_expand_icon[data-v-497d1621]{margin-left:16px;font-size:6px;width:10px}.menu_item__available[data-v-497d1621]{color:#606266;cursor:pointer}.menu_item__available[data-v-497d1621]:hover{background:#ecf5ff;color:#409eff}.menu_item__disabled[data-v-497d1621]{color:#c0c4cc;cursor:not-allowed}.menu_item_expand[data-v-497d1621]{background:#ecf5ff;color:#409eff}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, `.menu[data-v-497d1621]{position:fixed;box-shadow:0 2px 4px rgba(0,0,0,.12),0 0 6px rgba(0,0,0,.04);background:#fff;border-radius:4px;padding:8px 0}.menu_body[data-v-497d1621]{display:block}.menu_item[data-v-497d1621]{list-style:none;line-height:32px;padding:0 16px;margin:0;font-size:13px;outline:0;display:flex;align-items:center;transition:.2s;border-bottom:1px solid #00000000}.menu_item__divided[data-v-497d1621]{border-bottom-color:#ebeef5}.menu_item .menu_item_icon[data-v-497d1621]{margin-right:8px;width:13px}.menu_item .menu_item_label[data-v-497d1621]{flex:1}.menu_item .menu_item_expand_icon[data-v-497d1621]{margin-left:16px;font-size:6px;width:10px}.menu_item__available[data-v-497d1621]{color:#606266;cursor:pointer}.menu_item__available[data-v-497d1621]:hover{background:#ecf5ff;color:#409eff}.menu_item__disabled[data-v-497d1621]{color:#c0c4cc;cursor:not-allowed}.menu_item_expand[data-v-497d1621]{background:#ecf5ff;color:#409eff}`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -42,7 +42,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".contextmenu-submenu-fade-enter-active,.contextmenu-submenu-fade-leave-active{transition:opacity .1s}.contextmenu-submenu-fade-enter,.contextmenu-submenu-fade-leave-to{opacity:0}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, `.contextmenu-submenu-fade-enter-active,.contextmenu-submenu-fade-leave-active{transition:opacity .1s}.contextmenu-submenu-fade-enter,.contextmenu-submenu-fade-leave-to{opacity:0}`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -60,68 +60,55 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".contextmenu-submenu-fade-enter-active
   Author Tobias Koppers @sokra
 */
 module.exports = function (cssWithMappingToString) {
-  var list = []; // return the list of modules as css string
+  var list = [];
 
+  // return the list of modules as css string
   list.toString = function toString() {
     return this.map(function (item) {
       var content = "";
       var needLayer = typeof item[5] !== "undefined";
-
       if (item[4]) {
         content += "@supports (".concat(item[4], ") {");
       }
-
       if (item[2]) {
         content += "@media ".concat(item[2], " {");
       }
-
       if (needLayer) {
         content += "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {");
       }
-
       content += cssWithMappingToString(item);
-
       if (needLayer) {
         content += "}";
       }
-
       if (item[2]) {
         content += "}";
       }
-
       if (item[4]) {
         content += "}";
       }
-
       return content;
     }).join("");
-  }; // import a list of modules into the list
+  };
 
-
+  // import a list of modules into the list
   list.i = function i(modules, media, dedupe, supports, layer) {
     if (typeof modules === "string") {
       modules = [[null, modules, undefined]];
     }
-
     var alreadyImportedModules = {};
-
     if (dedupe) {
       for (var k = 0; k < this.length; k++) {
         var id = this[k][0];
-
         if (id != null) {
           alreadyImportedModules[id] = true;
         }
       }
     }
-
     for (var _k = 0; _k < modules.length; _k++) {
       var item = [].concat(modules[_k]);
-
       if (dedupe && alreadyImportedModules[item[0]]) {
         continue;
       }
-
       if (typeof layer !== "undefined") {
         if (typeof item[5] === "undefined") {
           item[5] = layer;
@@ -130,7 +117,6 @@ module.exports = function (cssWithMappingToString) {
           item[5] = layer;
         }
       }
-
       if (media) {
         if (!item[2]) {
           item[2] = media;
@@ -139,7 +125,6 @@ module.exports = function (cssWithMappingToString) {
           item[2] = media;
         }
       }
-
       if (supports) {
         if (!item[4]) {
           item[4] = "".concat(supports);
@@ -148,11 +133,9 @@ module.exports = function (cssWithMappingToString) {
           item[4] = supports;
         }
       }
-
       list.push(item);
     }
   };
-
   return list;
 };
 
@@ -209,7 +192,7 @@ var update = add("4fa141bd", content, true, {"sourceMap":false,"shadowMode":fals
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": () => (/* binding */ addStylesClient)
+  Z: () => (/* binding */ addStylesClient)
 });
 
 ;// CONCATENATED MODULE: ./node_modules/vue-style-loader/lib/listToStyles.js
@@ -956,7 +939,8 @@ class Contextmenu {
       el = el.parentElement;
     }
     if (!menus.find(m => m === el)) {
-      this.close();
+      // 屏蔽下面的代码, 使用 Vue.prototype.$contextmenu 直接调用, 会导致直接关闭.
+      // this.close();
     }
   }
 

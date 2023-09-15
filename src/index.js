@@ -37,7 +37,8 @@ class Contextmenu {
       el = el.parentElement;
     }
     if (!menus.find(m => m === el)) {
-      this.close();
+      // 屏蔽下面的代码, 使用 Vue.prototype.$contextmenu 直接调用, 会导致直接关闭.
+      // this.close();
     }
   }
 
